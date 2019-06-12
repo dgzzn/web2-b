@@ -17,7 +17,7 @@
             {{--</nav>--}}
 
             <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
-                <h1>Edit Post</h1>
+                <h1>Editar Post</h1>
                 <div class="col-md-6">
                     <form method="post" action="{{ route('post.update', ['id' => $post->id]) }}">
                         {{ csrf_field() }}

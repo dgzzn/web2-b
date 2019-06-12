@@ -22,7 +22,7 @@
                 <a href="{{ route('post.edit', ['id' => $post->id]) }}" class="btn btn-primary btn-sm">
                     Editar Post
                 </a>
-                <a id="delete" href="{{ route('post.delete', ['id' => $post->id]) }}" class="btn btn-danger btn-sm">
+                <a id="delete" onclick="return confirm('Confirmar exclusão?')" href="{{ route('post.delete', ['id' => $post->id]) }}" class="btn btn-danger btn-sm">
                     Excluir Post
                 </a><br><br>
                 <div class="col-sm-8 blog-main">
@@ -32,10 +32,4 @@
             </main>
         </div>
     </div>
-@endsection
-@section('scripts')
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-    <script>
-
-    </script>
 @endsection

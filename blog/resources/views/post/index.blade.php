@@ -15,7 +15,7 @@ Página inicial
                 @foreach($posts as $post)
                     <div class="blog-post">
                         <h2 class="blog-post-title">{{ $post->titulo }}</h2>
-                        <p class="blog-post-meta"><small><i>{{ Carbon\Carbon::parse($post->created_at)->format('d/m/Y')  }} por <a href="#">{{ $post->name }}</a></i></small></p>
+                        <p class="blog-post-meta"><small><i>Postado em {{ Carbon\Carbon::parse($post->created_at)->format('d/m/Y')  }} por <a href="#">{{ $post->name }}</a></i></small></p>
 
                         <p>{!! \Illuminate\Support\Str::words($post->conteudo, 30, '...') !!}</p>
                         <blockquote>
